@@ -18,6 +18,11 @@
     flex-shrink: 0;
 }
 
+.header-title h1 {
+    font-size: 1.625rem;
+    font-weight: bold;
+}
+
 .header-nav {
     flex: 2;
     display: flex;
@@ -44,6 +49,7 @@
 }
 
 .header-search {
+    width: 100%;
     border: none;
     border-radius: 5px;
     background-color: var(--white-color);
@@ -63,4 +69,42 @@
     border: none;
     outline: none;
     font-size: 1rem;
+}
+
+@media (min-width: 810px) {
+    .header {
+        padding: 22px 32px;
+    }
+    .header-main {
+        flex-wrap: nowrap;
+        gap: 32px;
+    }
+    .header-title h1 {
+        font-size: 2.75rem;
+    }
+    .header-nav {
+        flex-flow: nowrap;
+        justify-content: flex-end;
+        gap: 20px;
+        order: 4;
+    }
+    .btn-create_event {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+    .header-menu {
+        flex-basis: 1;
+    }
+    .header-search {
+        width: 670px;
+        height: 46px;
+        padding: 25px 20px;
+        margin-top: 0px;
+        margin-right: 55px;
+    }
+    .header-search input {
+        height: 42px;
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
