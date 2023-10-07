@@ -1,0 +1,14 @@
+.highlights-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.highlights-list::-webkit-scrollbar {
+    display: none;
+  }
+
+.highlight {
+    display: inline-block;
+    min-width: 350px;
+}
