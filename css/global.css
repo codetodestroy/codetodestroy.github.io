@@ -23,9 +23,13 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+h1 {
+    font-size: 1.625rem;
+    font-weight: bold;
+}
+
 .sections-title {
     font-family: Kanit;
     font-size: 1.125rem;
     text-transform: uppercase;
-    margin: 15px 0px 10px 20px;
 }

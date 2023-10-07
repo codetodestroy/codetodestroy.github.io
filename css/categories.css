@@ -1,13 +1,19 @@
 .categories {
-    margin-bottom: 30px;
+    margin: 15px 0px 15px 0px;
+}
+
+.categories .sections-title {
+    margin: 15px 20px;
 }
 
 .categories-list {
     display: flex;
     flex-flow: nowrap row;
-    gap: 10px;
+    gap: 5px;
 
     overflow-x: auto;
+
+    padding-left: 20px;
 }
 
 .categories-list::-webkit-scrollbar {

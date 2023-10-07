@@ -14,11 +14,7 @@
 .header-title {
     font-family: Kanit;
     color: var(--primary-color);
-
-    font-size: 1.3rem;
-    font-weight: bold;
     text-decoration: none;
-
     flex-shrink: 0;
 }
 
@@ -33,11 +29,11 @@
 .btn-create_event {
     background-color: var(--botton-color);
     border-radius: 5px;
-    padding: 15px 10px;
+    padding: 10px 5px;
     text-transform: uppercase;
     color: var(--white-color);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.75rem;
     border: none;
 
     flex-shrink: 0;
@@ -61,6 +57,7 @@
 }
 
 .header-search input {
+    background-color: inherit;
     height: 32px;
     width: 90%;
     border: none;

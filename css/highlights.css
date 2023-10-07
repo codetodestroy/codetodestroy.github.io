@@ -1,7 +1,17 @@
+.highlights {
+    margin: 15px 0px 15px 0px;
+}
+
+.highlights .sections-title {
+    margin: 15px 20px;
+}
+
 .highlights-list {
     display: flex;
     gap: 10px;
     overflow-x: auto;
+
+    padding-left: 20px;
 }
 
 .highlights-list::-webkit-scrollbar {
@@ -10,5 +20,4 @@
 
 .highlight {
     display: inline-block;
-    min-width: 350px;
 }
