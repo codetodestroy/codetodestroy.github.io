@@ -9,8 +9,7 @@
 .categories-list {
     display: flex;
     flex-flow: nowrap row;
-    gap: 5px;
-
+    gap: 1px;
     overflow-x: auto;
 
     padding-left: 20px;
@@ -33,7 +32,7 @@
 
 .category-title {
     font-weight: normal;
-    font-size: 0.875;
+    font-size: 0.875rem;
     min-width: 10ch;
     text-align: center;
 }
