@@ -23,13 +23,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-main {
-    padding: 15px 0 15px 20px;
-}
-
 .sections-title {
     font-family: Kanit;
     font-size: 1.125rem;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin: 15px 0px 10px 20px;
 }
