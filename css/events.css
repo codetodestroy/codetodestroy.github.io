@@ -1,0 +1,44 @@
+.last-events, .weekend-events, .college-events {
+    margin: 15px 0px 15px 0px;
+}
+
+.sections-title {
+    margin: 15px 20px;
+}
+
+.events-list, .weekend-events-list, .college-events-list {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+
+    overflow-x: auto;
+}
+
+.events-list::-webkit-scrollbar, .weekend-events-list::-webkit-scrollbar, .college-events-list::-webkit-scrollbar {
+    display: none;
+}
+
+.event {
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 10px;
+}
+
+.event-img {
+    min-width: 170px;
+}
+
+.event-date {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+}
+
+.event-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.event-local {
+    font-size: 0.75rem;
+}

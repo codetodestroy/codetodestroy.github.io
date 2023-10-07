@@ -16,10 +16,6 @@
 
 .highlights-list::-webkit-scrollbar {
     display: none;
-  }
-
-.highlight {
-    display: inline-block;
 }
 
 .highlight-img {
