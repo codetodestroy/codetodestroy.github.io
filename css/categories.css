@@ -9,7 +9,7 @@
 .categories-list {
     display: flex;
     flex-flow: nowrap row;
-    gap: 1px;
+    gap: 5px;
     overflow-x: auto;
 
     padding-left: 20px;
