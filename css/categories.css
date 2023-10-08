@@ -2,10 +2,6 @@
     margin: 15px 0px 15px 0px;
 }
 
-.categories .sections-title {
-    margin: 15px 20px;
-}
-
 .categories-list {
     display: flex;
     flex-flow: nowrap row;
@@ -35,4 +31,28 @@
     font-size: 0.875rem;
     min-width: 10ch;
     text-align: center;
+}
+
+@media (min-width: 800px) {
+    .categories {
+        margin: 30px 30px 5px;
+    }
+    .categories .sections-title {
+        margin-bottom: 0px;
+    }
+    .categories-list {
+        gap: 18px;
+    }
+    .category {
+        align-items: center;
+        gap: 10px;
+    }
+    .category-img {
+        min-width: 150px;
+        min-height: 184px;
+    }
+    .category-title {
+        font-size: 1.125rem;
+        text-align: center;
+    }
 }

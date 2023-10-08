@@ -1,0 +1,7 @@
+.hidden-modal {
+    display: none;
+}
+
+.hidden-scroll {
+    overflow: hidden;
+}
