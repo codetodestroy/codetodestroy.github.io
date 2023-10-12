@@ -1,5 +1,5 @@
 .categories {
-    margin: 15px 0px 15px;
+    margin: 15px 0px 10px;
 }
 
 .categories-carrossel {
@@ -64,7 +64,7 @@
     }
     
     .categories-list {
-        gap: 18px;
+        gap: 22px;
     }
     
     .category {
@@ -83,6 +83,7 @@
     .category-title {
         text-align: center;
         font-size: 1.125rem;
+
     }
     
 }
