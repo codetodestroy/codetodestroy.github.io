@@ -1,16 +1,11 @@
 .categories {
-    margin: 15px 0 20px;
-}
-
-.categories .sections-title { 
-    padding-left: 20px;
+    margin: 15px 0px 10px;
 }
 
 .categories-carrossel {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-left: 20px;
 }
 
 .arrow-left, .arrow-right {
@@ -22,12 +17,11 @@
     align-items: center;
     gap: 10px;
     width: 100%;
-    overflow-x: hidden;
-    scroll-snap-type: x;
-    cursor: grab;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    user-select: none;
+    overflow-x: auto;
+}
+
+.categories-list::-webkit-scrollbar {
+    display: none;
 }
 
 .category {
@@ -36,7 +30,14 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    scroll-snap-align: start;
+}
+
+.category:first-child {
+    padding-left: 20px;
+}
+
+.category:last-child {
+    padding-right: 20px;
 }
 
 .category-img {
@@ -46,5 +47,6 @@
 
 .category-title {
     text-align: center;
-    min-width: 10ch;
+    font-size: 0.875rem;
+    min-width: 11ch;
 }

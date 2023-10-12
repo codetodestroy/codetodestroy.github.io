@@ -1,16 +1,29 @@
 .highlights {
-    margin: 15px 0 10px 20px;
+    margin: 10px 0 10px;
 }
 
 .highlights-carrossel {
     height: 180px;
+    width: 100%;
 }
 
 .highlights-list {
     display: flex;
     align-items: center;
     gap: 10px;
-    overflow: hidden;
+    overflow-x: auto;
+}
+
+.highlights-list::-webkit-scrollbar {
+    display: none;
+}
+
+.highlight:first-child {
+    padding-left: 20px;
+}
+
+.highlight:last-child {
+    padding-right: 20px;
 }
 
 .highlight-img {

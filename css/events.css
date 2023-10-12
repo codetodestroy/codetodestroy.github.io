@@ -1,17 +1,29 @@
 .last-events, .weekend-events, .college-events {
-    margin: 15px 0 10px 20px;
+    margin: 10px 0 10px;
 }
 
 .events-list {
     display: flex;
     gap: 10px;
-    overflow: hidden;
+    overflow: auto;
+}
+
+.events-list::-webkit-scrollbar {
+    display: none;
 }
 
 .event {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.event:first-child {
+    padding-left: 20px;
+}
+
+.event:last-child {
+    padding-right: 20px;
 }
 
 .event-img {
