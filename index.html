@@ -9,22 +9,30 @@
     <script src="https://kit.fontawesome.com/b549259b17.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header-container">
         <div class="header-main">
             <a class="header-title" href="/"><h1>NoEvento!</h1></a>
             <nav class="header-nav">
-                <button class="btn-create_event">Criar Evento</button>
-                <i class="header-menu fa-solid fa-bars fa-2xl" style="color: #9A1BFF;"></i>
-                <ul class="header-menu-modal hidden-modal">
-                        <i class="close-header-menu fa-solid fa-xmark fa-2xl"></i>
-                        <li>Criar Conta</li>
-                        <li>Acessar Conta</li>
+                <ul class="header-nav-options">
+                    <li class="btn-menu btn-create-event"><a href="#">Criar Evento</a></li>
+                    <li class="btn-menu btn-login"><a href="#">Acessar Conta</a></li>
+                    <li class="btn-menu btn-signup"><a href="#">Criar Conta</a></li>
+                    <li>
+                        <i class="btn-menu btn-burger fa-solid fa-bars fa-2xl"></i>
+                        <ul class="header-nav-menu-modal-visitant hidden-modal">
+                            <li><i class="close-header-menu fa-solid fa-xmark fa-2xl"></i></li>
+                            <li class="btn-menu btn-login"><a href="#">Acessar Conta</a></li>
+                            <li class="btn-menu btn-signup"><a href="#">Criar Conta</a></li>
+                        </ul>
+                     </li>
                 </ul>
             </nav>
             <div class="header-search">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
                 <input type="search" placeholder="Pesquisar eventos, palestras, cursos...">
             </div>
         </div>
@@ -33,84 +41,95 @@
     <main>
         <section class="categories">
             <h2 class="sections-title">Categorias</h2>
-            <ul class="categories-list">
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 1">
-                    <a class="category-title">Categoria 1</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 2">
-                    <a class="category-title">Categoria 2</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 3">
-                    <a class="category-title">Categoria 3</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 4">
-                    <a class="category-title">Categoria 4</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 5">
-                    <a class="category-title">Categoria 5</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 6">
-                    <a class="category-title">Categoria 6</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 7">
-                    <a class="category-title">Categoria 7</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 8">
-                    <a class="category-title">Categoria 8</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 9">
-                    <a class="category-title">Categoria 9</a>
-                </li>
-                <li class="category">
-                    <img class="category-img" src="./img/default-category.svg" alt="Categoria 10">
-                    <a class="category-title">Categoria 10</a>
-                </li>
-            </ul>
+            <div class="categories-carrossel">
+                <i class="arrow-left fa-solid fa-arrow-left fa-2xl"></i>
+                <ul class="categories-list">
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 1">
+                        <a class="category-title">Categoria 1</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 2">
+                        <a class="category-title">Categoria 2</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 3">
+                        <a class="category-title">Categoria 3</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 4">
+                        <a class="category-title">Categoria 4</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 5">
+                        <a class="category-title">Categoria 5</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 6">
+                        <a class="category-title">Categoria 6</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 7">
+                        <a class="category-title">Categoria 7</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 8">
+                        <a class="category-title">Categoria 8</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 9">
+                        <a class="category-title">Categoria 9</a>
+                    </li>
+                    <li class="category">
+                        <img class="category-img" src="./img/default-category.svg" alt="Categoria 10">
+                        <a class="category-title">Categoria 10</a>
+                    </li>
+                </ul>
+                <i class="arrow-right fa-solid fa-arrow-right fa-2xl"></i>
+            </div>
         </section>
 
         <section class="highlights">
             <h2 class="sections-title">Destaques</h2>
-            <ul class="highlights-list">
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 1">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 2">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 3">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 4">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 5">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 6">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 7">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 8">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 9">
-                </li>
-                <li class="highlight">
-                    <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 10">
-                </li>
-            </ul>
+            <div class="highlights-carrossel">
+                <ul class="highlights-list">
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 1">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 2">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 3">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 4">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 5">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 6">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 7">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 8">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 9">
+                    </li>
+                    <li class="highlight">
+                        <img class="highlight-img" src="./img/default-highlight.svg" alt="Destaque 10">
+                    </li>
+                </ul>
+                <div class="highlight-info">
+                    <span class="event-date">DIA, DATA - HORA</span>
+                    <h3 class="event-title">Título do Evento</h3>
+                    <span class="event-local">Localização</span>
+                </div>  
+            </div>
         </section>
 
         <section class="events"> 
@@ -182,7 +201,7 @@
 
             <section class="weekend-events">
                 <h2 class="sections-title">Neste Fim de Semana</h2>
-                <ul class="weekend-events-list">
+                <ul class="events-list">
                     <li class="event">
                         <img class="event-img" src="./img/default-events.svg" alt="Evento 1">
                         <span class="event-date">DIA, DATA - HORA</span>
@@ -248,7 +267,7 @@
 
             <section class="college-events">
                 <h2 class="sections-title">Acadêmicos</h2>
-                <ul class="college-events-list">
+                <ul class="events-list">
                     <li class="event">
                         <img class="event-img" src="./img/default-events.svg" alt="Evento 1">
                         <span class="event-date">DIA, DATA - HORA</span>
@@ -311,9 +330,10 @@
                     </li>
                 </ul>
             </section>
-
         </section>
+    </main>
 
+    <div class="footer-container">
         <footer class="footer">
             <h1 class="footer-title">NoEvento!</h1>
             <section class="footer-links">
@@ -346,9 +366,6 @@
                 <p class="footer-copy-text">NoEvento! &copy; Copyright 2023 | Faculdade SENAC</p>
             </section>
         </footer>
-        
-    </main>
-
-    <script src="./js/script.js"></script>
+    </div>
 </body>
 </html>

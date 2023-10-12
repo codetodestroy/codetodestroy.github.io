@@ -1,41 +1,54 @@
-.footer {
-    margin-top: 30px;
-    padding: 25px 20px 40px;
+.footer-container {
     background-color: var(--second-color);
+    margin: 30px 0 0 0;
+    padding: 25px 20px 42px;
     color: var(--white-color);
 }
 
 .footer-title {
     font-size: 1.125rem;
-    border-bottom: 1px solid var(--white-color);
     padding-bottom: 25px;
+    border-bottom: 1px solid var(--white-color);
 }
 
 .footer-links {
-    margin-top: 25px;
+    margin: 25px 0 118px;
+
     display: flex;
     flex-wrap: wrap;
-
-    gap: 90px;
-
-    border-bottom: 1px solid var(--white-color);
-    padding-bottom: 60px;
+    gap: 58px;
 }
 
-.footer-links ul {
+.footer-links-find-events, .footer-links-categories, .footer-links-social-media {
     display: flex;
-    flex-flow: nowrap column;
+    flex-direction: column;
     gap: 14px;
 }
 
-.footer-links ul li a {
-    color: var(--white-color);
+.footer-links-find-events {
+    flex: 0 1 auto;
+}
+
+.footer-links-find-events a, .footer-links-categories a, .footer-links-social-media a {
     font-size: 0.75rem;
-    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.footer-links-categories {
+    flex: 0 1 auto;
+}
+
+.footer-links-social-media {
+    flex: 2 1 200px;
+}
+
+.footer-links-find-events h4:first-child, .footer-links-categories h4:first-child, .footer-links-social-media h4:first-child  {
+    margin-bottom: 32px;
 }
 
 .footer-copy-text {
-    margin-top: 14px;
-    font-size: 0.75rem;
-    font-weight: normal;
+    padding-top: 14px;
+    border-top: 1px solid var(--white-color);
+    font-size: 0.7rem;
 }
