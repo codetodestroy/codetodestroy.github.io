@@ -1,12 +1,27 @@
-const btnBurgerMenu = document.querySelector('.header-menu');
-const btnCloseModal = document.querySelector('.close-header-menu');
+const categoriesCarrossel = document.querySelector('.categories-list');
 
-const btnMenuModal = document.querySelector('.header-menu-modal');
+let pressed = false;
+let startX = 0;
 
-function showMenu() {
-    btnMenuModal.classList.toggle('hidden-modal');
-    document.body.classList.toggle('hidden-scroll');
-}
+categoriesCarrossel.addEventListener('mousedown', function (e) {
+    pressed = true;
+    startX = e.clientX;
+    categoriesCarrossel.style.cursor = 'grabbing';
+})
 
-btnBurgerMenu.addEventListener('click', showMenu);
-btnCloseModal.addEventListener('click', showMenu);
+categoriesCarrossel.addEventListener('mouseleave', function (e) {
+    pressed = false;
+})
+
+window.addEventListener('mouseup', function (e) {
+    pressed = false;
+    categoriesCarrossel.style.cursor = 'grab';
+})
+
+categoriesCarrossel.addEventListener('mousemove', function (e) {
+    if(!pressed) {
+        return
+    }
+
+    categoriesCarrossel.scrollLeft += startX - e.clientX;
+})

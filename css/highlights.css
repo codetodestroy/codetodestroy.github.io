@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.highlight .highlight-img {
+.highlight-img {
     width: 350px;
     height: 180px;
     object-fit: cover;

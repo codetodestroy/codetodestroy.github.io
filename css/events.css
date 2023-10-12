@@ -14,6 +14,11 @@
     gap: 10px;
 }
 
+.event-img {
+    width: 170px;
+    height: 90px;
+}
+
 .event-date {
     font-size: .75rem;
     font-weight: bold;
