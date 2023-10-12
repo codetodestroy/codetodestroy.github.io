@@ -1,4 +1,8 @@
-.last-events, .weekend-events, .college-events {
+.events {
+    margin: 15px 0 15px;
+}
+
+.weekend-events, .college-events {
     margin: 10px 0 10px;
 }
 

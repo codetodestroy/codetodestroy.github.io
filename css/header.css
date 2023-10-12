@@ -87,9 +87,88 @@
 
 .header-search input {
     background-color: var(--white-color);
-    width: 90%;
+    width: 100%;
     height: 32px;
     border: none;
     outline: none;
     font-size: 1.2rem;
+}
+
+@media (min-width: 640px) {
+    .header-container {
+        padding: 22px 32px;
+    }
+    .header-main {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    .header-title {
+        flex: 0 1 auto;
+    }
+    .header-search {
+        flex: 1 1 300px;
+        order: 1;
+    
+        height: 46px;
+        padding: 14px;
+    
+        gap: 10px;
+    }
+    .header-search input {
+        height: 46px;
+        font-size: 1.5rem;
+    }
+    .header-nav {
+        flex: 2 1 auto;
+        order: 2;
+
+        justify-content: flex-end;
+    }
+    .header-nav-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-create-event {
+        flex: 0 1 auto;
+    }
+
+    .btn-create-event a {
+        color: var(--white-color);
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .btn-users ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 32px;
+    }
+
+    .btn-users .btn-login, .btn-users .btn-signup {
+        flex: 1 1 auto;
+        display: inline-block;
+    }
+
+    .btn-users .btn-login a , .btn-users .btn-signup a {
+        color: var(--white-color);
+        text-transform: uppercase;
+    }
+
+    .btn-users .btn-signup {
+        padding: 13px 16px;
+        border-radius: 5px;
+        background-color: var(--primary-color);
+    }
+
+    .btn-menu {
+        padding: 13px 16px;
+        min-width: 18ch;
+        text-align: center;
+    }
+    .btn-burger {
+        display: none;
+    }
 }
