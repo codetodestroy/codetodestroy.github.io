@@ -58,13 +58,14 @@
     
     .events-list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 40px 20px;
         overflow: hidden;
         padding: 20px;
     }
     
     .event {
+        width: 420px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -79,10 +80,12 @@
     }
     
     .event-img {
-        flex: 2 1 100%;
+        object-fit: cover;
+        flex: 2 2 auto;
         order: 1;
         width: 420px;
-        height: 90px;
+        height: 167px;
+        border-radius: 5px;
     }
 
     .event-info {
@@ -109,5 +112,11 @@
     
     .event-local {
         font-size: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .events-list {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

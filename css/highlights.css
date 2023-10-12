@@ -73,7 +73,9 @@
         height: 510px;
         border-radius: 5px;
     }
-    
+}
+
+@media (min-width: 1000px) {
     .highlight-info {
         display: flex;
         flex-direction: column;
