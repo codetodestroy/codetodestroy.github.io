@@ -65,6 +65,8 @@
     
     .categories-list {
         gap: 22px;
+        overflow: hidden;
+        scroll-behavior: smooth;
     }
     
     .category {
