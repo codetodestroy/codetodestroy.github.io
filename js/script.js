@@ -34,8 +34,10 @@ const btnCreateAccountMobile = openCreateAccount[1];
 
 btnCreateAccountMobile.addEventListener('click', () => {
     modalSignUp.classList.toggle('hidden-modal');
+    document.body.style.overflow = 'hidden';
 });
 
 closeCreateAccount.addEventListener('click', () => {
     modalSignUp.classList.toggle('hidden-modal');
+    document.body.style.overflow = 'scroll';
 });
