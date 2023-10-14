@@ -27,21 +27,16 @@ closeMenuMobile.addEventListener('click', () => {
 });
 
 // ============================================================== //
-
 const modals = document.querySelectorAll('.modal-form');
 
 const btnLogin = document.querySelectorAll('.btn-login');
 const btnCloseLogin = document.querySelector('.close-modal-login');
+
 const btnSignUp = document.querySelectorAll('.btn-signup');
 const btnCloseSignUp = document.querySelector('.close-modal-signup');
 
-function openModalLogin() {
-    modals[1].classList.toggle('hidden-modal');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModalLogin() {
-    alert('teste');
+function closeModalSignUp() {
+    modals[0].classList.toggle('hidden-modal');
 }
 
 function openModalSignUp() {
@@ -49,9 +44,17 @@ function openModalSignUp() {
     document.body.style.overflow = 'hidden';
 }
 
-function closeModalSignUp() {
-    modals[0].classList.toggle('hidden-modal');
+function closeModalLogin() {
+    modals[1].classList.toggle('hidden-modal');
 }
+
+function openModalLogin() {
+    modals[1].classList.toggle('hidden-modal');
+    document.body.style.overflow = 'hidden';
+}
+
+btnCloseSignUp.addEventListener('click', closeModalSignUp);
+btnCloseLogin.addEventListener('click', closeModalLogin);
 
 btnLogin[0].addEventListener('click', openModalLogin);
 btnLogin[1].addEventListener('click', openModalLogin);
@@ -59,5 +62,3 @@ btnLogin[2].addEventListener('click', openModalLogin);
 btnSignUp[0].addEventListener('click', openModalSignUp);
 btnSignUp[1].addEventListener('click', openModalSignUp);
 btnSignUp[2].addEventListener('click', openModalSignUp);
-
-btnCloseSignUp.addEventListener('click', closeModalSignUp);
