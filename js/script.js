@@ -17,9 +17,11 @@ const closeMenuMobile = document.querySelector('.close-header-menu');
 const modelMenuMobile = document.querySelector('.header-nav-menu-modal-visitant');
 
 openMenuMobile.addEventListener('click', () => {
-    modelMenuMobile.style.display = 'flex';
+    modelMenuMobile.classList.toggle('hidden-modal');
+    document.body.style.overflow = 'hidden';
 });
 
 closeMenuMobile.addEventListener('click', () => {
-    alert('fechou!');
+    modelMenuMobile.classList.toggle('hidden-modal');
+    document.body.style.overflow = 'scroll';
 });

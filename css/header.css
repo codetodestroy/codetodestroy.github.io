@@ -47,10 +47,6 @@
     padding: 10px 5px;
 }
 
-.btn-menu:hover {
-    cursor: pointer;
-}
-
 .btn-create-event {
     background-color: var(--botton-color);
     border-radius: 5px;
@@ -65,6 +61,11 @@
 
 .btn-burger {
     color: var(--primary-color);
+}
+
+.btn-burger:hover {
+    cursor: pointer;
+    color: var(--white-color);
 }
 
 .header-search {
@@ -91,7 +92,7 @@
 }
 
 .header-nav-menu-modal-visitant {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -115,13 +116,18 @@
     color: var(--black-color);
 }
 
-.header-nav-menu-modal-visitant li:hover {
+.header-nav-menu-modal-visitant li a:hover, .close-header-menu:hover {
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .close-header-menu {
     color: var(--black-color);
     margin-bottom: 84px;
+}
+
+.hidden-modal {
+    display: none;
 }
 
 @media (min-width: 640px) {
