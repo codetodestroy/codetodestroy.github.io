@@ -42,6 +42,13 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-family: Kanit;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 h4 {
     font-weight: bold;
     font-size: 0.75rem;

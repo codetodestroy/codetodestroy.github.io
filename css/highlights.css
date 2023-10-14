@@ -46,10 +46,6 @@
         gap: 22px;
         padding-left: 60px;
     }
-
-    .highlight-button {
-        display: inline-block;
-    }
     
     .highlights-list {
         width: 1208px;
@@ -76,6 +72,10 @@
 }
 
 @media (min-width: 1000px) {
+    .highlight-button {
+        display: inline-block;
+    }
+    
     .highlight-info {
         display: flex;
         flex-direction: column;

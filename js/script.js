@@ -25,3 +25,17 @@ closeMenuMobile.addEventListener('click', () => {
     modelMenuMobile.classList.toggle('hidden-modal');
     document.body.style.overflow = 'scroll';
 });
+
+const openCreateAccount = document.querySelectorAll(".btn-signup");
+const closeCreateAccount = document.querySelector(".close-modal-signup");
+const modalSignUp = document.querySelector('.modal-signup');
+
+const btnCreateAccountMobile = openCreateAccount[1];
+
+btnCreateAccountMobile.addEventListener('click', () => {
+    modalSignUp.classList.toggle('hidden-modal');
+});
+
+closeCreateAccount.addEventListener('click', () => {
+    modalSignUp.classList.toggle('hidden-modal');
+});
