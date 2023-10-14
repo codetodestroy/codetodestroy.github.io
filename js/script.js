@@ -26,18 +26,38 @@ closeMenuMobile.addEventListener('click', () => {
     document.body.style.overflow = 'scroll';
 });
 
-const openCreateAccount = document.querySelectorAll(".btn-signup");
-const closeCreateAccount = document.querySelector(".close-modal-signup");
-const modalSignUp = document.querySelector('.modal-signup');
+// ============================================================== //
 
-const btnCreateAccountMobile = openCreateAccount[1];
+const modals = document.querySelectorAll('.modal-form');
 
-btnCreateAccountMobile.addEventListener('click', () => {
-    modalSignUp.classList.toggle('hidden-modal');
+const btnLogin = document.querySelectorAll('.btn-login');
+const btnCloseLogin = document.querySelector('.close-modal-login');
+const btnSignUp = document.querySelectorAll('.btn-signup');
+const btnCloseSignUp = document.querySelector('.close-modal-signup');
+
+function openModalLogin() {
+    modals[1].classList.toggle('hidden-modal');
     document.body.style.overflow = 'hidden';
-});
+}
 
-closeCreateAccount.addEventListener('click', () => {
-    modalSignUp.classList.toggle('hidden-modal');
-    document.body.style.overflow = 'scroll';
-});
+function closeModalLogin() {
+    alert('teste');
+}
+
+function openModalSignUp() {
+    modals[0].classList.toggle('hidden-modal');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModalSignUp() {
+    modals[0].classList.toggle('hidden-modal');
+}
+
+btnLogin[0].addEventListener('click', openModalLogin);
+btnLogin[1].addEventListener('click', openModalLogin);
+btnLogin[2].addEventListener('click', openModalLogin);
+btnSignUp[0].addEventListener('click', openModalSignUp);
+btnSignUp[1].addEventListener('click', openModalSignUp);
+btnSignUp[2].addEventListener('click', openModalSignUp);
+
+btnCloseSignUp.addEventListener('click', closeModalSignUp);

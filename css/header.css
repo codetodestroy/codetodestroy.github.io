@@ -126,7 +126,7 @@
     margin-bottom: 84px;
 }
 
-.modal-signup {
+.modal-form {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -134,7 +134,7 @@
     left: 0;
 }
 
-.signup {
+.modal-signup, .modal-login {
     background-color: var(--white-color);
     width: 100vw;
     height: 100vh;
@@ -149,8 +149,8 @@
     margin: 0 auto;
 }
 
-.form-signup {
-    width: 100%;
+.form-signup, .form-login {
+    width: 344px;
     
     padding: 40px 23px;
     display: flex;
@@ -160,7 +160,7 @@
     gap: 20px;
 }
 
-.form-signup label {
+.form-signup label, .form-login label {
     position: relative;
     width: 100%;
     display: flex;
@@ -169,12 +169,12 @@
     border-bottom: 1px solid var(--black-color);
 }
 
-.form-signup i {
+.form-signup i, .form-login i {
     flex: 1 0 auto;
     padding: 10px 0 10px 20px;
 }
 
-.form-signup input {
+.form-signup input, .form-login input {
     flex: 2 1 auto;
     width: 80%;
     height: 40px;
@@ -185,7 +185,7 @@
     font-family: Roboto;
 }
 
-.form-signup input[type="submit"] {
+.form-signup input[type="submit"], .form-login input[type="submit"] {
     width: 100%;
     height: 46px;
     padding: 0;
@@ -199,11 +199,11 @@
     letter-spacing: 1px;
 }
 
-.form-signup input:focus {
+.form-signup input:focus, .form-login input:focus {
     outline-color: var(--primary-color);
 }
 
-.signup p {
+.modal-signup p, .modal-login p {
     width: 100%;
     padding-top: 40px;
     border-top: 1px solid var(--black-color);
@@ -211,14 +211,15 @@
     text-align: center;
 }
 
-.signup p a {
+.modal-signup p a, .modal-login p a {
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.close-modal-signup {
+.close-modal-signup, .close-modal-login {
     align-self: flex-end;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 .icon-form-show {
