@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Quicklist</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+
+    <body>
+        <button>⬅ Voltar</button>
+        <h1>Compras da semana</h1>
+        <div id="list">
+            <div id="add-item">
+                <label for="new-item"></label>
+                <input type="text" id="new-item" name="item-1" placeholder="Adicione um novo item">
+                <button>Adicionar item</button>
+            </div>
+            <div id="list-items">
+                <div class="item">
+                    <input type="checkbox" id="item-1" name="item-1" value="Pão de Forma">
+                    <label for="item-1">Pão de Forma</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="item-2" name="item-2" value="Café preto">
+                    <label for="item-2">Café preto</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="item-3" name="item-3" value="Suco de laranja">
+                    <label for="item-3">Suco de laranja</label>
+                </div>
+                <div class="item">
+                    <input type="checkbox" id="item-4" name="item-4" value="Bolacha">
+                    <label for="item-4">Bolacha</label>
+                </div>
+            </div>
+            <div id="list-status">
+                <div class="warning-status status">
+                    <span>O item foi removido da lista</span>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
