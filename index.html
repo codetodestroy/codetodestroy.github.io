@@ -16,35 +16,41 @@
     </head>
 
     <body>
-        <button>⬅ Voltar</button>
+        <a class="btn-back" href="#">↩ Voltar</a>
         <h1>Compras da semana</h1>
         <div id="list">
             <div id="add-item">
                 <label for="new-item"></label>
                 <input type="text" id="new-item" name="item-1" placeholder="Adicione um novo item">
-                <button>Adicionar item</button>
+                <button class="btn-addItem">Adicionar item</button>
             </div>
             <div id="list-items">
                 <div class="item">
                     <input type="checkbox" id="item-1" name="item-1" value="Pão de Forma">
                     <label for="item-1">Pão de Forma</label>
+                    <button class="btn-bin"></button>
                 </div>
                 <div class="item">
                     <input type="checkbox" id="item-2" name="item-2" value="Café preto">
                     <label for="item-2">Café preto</label>
+                    <button class="btn-bin"></button>
                 </div>
                 <div class="item">
                     <input type="checkbox" id="item-3" name="item-3" value="Suco de laranja">
                     <label for="item-3">Suco de laranja</label>
+                    <button class="btn-bin"></button>
                 </div>
                 <div class="item">
                     <input type="checkbox" id="item-4" name="item-4" value="Bolacha">
                     <label for="item-4">Bolacha</label>
+                    <button class="btn-bin"></button>
                 </div>
             </div>
             <div id="list-status">
-                <div class="warning-status status">
+                <div class="warning-status status hide">
+                    <span class="icon-status"></span>
                     <span>O item foi removido da lista</span>
+                    <button class="btn-close"></button>
                 </div>
             </div>
         </main>
