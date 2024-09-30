@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <title>Quicklist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Quicklist</title>
 
-        <link rel="stylesheet" href="css/style.css"> 
-    </head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
 
-    <body>
-        <a class="btn-back" href="#">↩ Voltar</a>
-        <h1>Compras da semana</h1>
-        <div id="list">
-            <div id="add-item">
-                <label for="new-item"></label>
-                <input type="text" id="new-item" name="item-1" placeholder="Adicione um novo item">
-                <button class="btn-addItem">Adicionar item</button>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img src="/assets/logo.svg" alt="Quicklist">
+        </a>
+        <h1>Quicklist</h1>
+    </header>
+    <a class="aBack" href="#">↩ Voltar</a>
+    <h2>Compras da semana</h2>
+    <div id="list">
+        <div id="add-item">
+            <label for="inItem"></label>
+            <input type="text" id="inItem" name="inItem" placeholder="Adicione um novo item">
+            <button class="btnAddItem">Adicionar item</button>
+        </div>
+        <ul id="list-items">
+            <li class="hide">
+                <input type="checkbox">
+                <label for="item-1"></label>
+                <button class="btnBin"></button>
+            </li>
+        </ul>
+        <div id="list-status">
+            <div class="warning-status status hide">
+                <span class="icon-status"></span>
+                <span>O item foi removido da lista</span>
+                <button class="btnClose"></button>
             </div>
-            <div id="list-items">
-                <div class="item">
-                    <input type="checkbox" id="item-1" name="item-1" value="Pão de Forma">
-                    <label for="item-1">Pão de Forma</label>
-                    <button class="btn-bin"></button>
-                </div>
-                <div class="item">
-                    <input type="checkbox" id="item-2" name="item-2" value="Café preto">
-                    <label for="item-2">Café preto</label>
-                    <button class="btn-bin"></button>
-                </div>
-                <div class="item">
-                    <input type="checkbox" id="item-3" name="item-3" value="Suco de laranja">
-                    <label for="item-3">Suco de laranja</label>
-                    <button class="btn-bin"></button>
-                </div>
-                <div class="item">
-                    <input type="checkbox" id="item-4" name="item-4" value="Bolacha">
-                    <label for="item-4">Bolacha</label>
-                    <button class="btn-bin"></button>
-                </div>
-            </div>
-            <div id="list-status">
-                <div class="warning-status status hide">
-                    <span class="icon-status"></span>
-                    <span>O item foi removido da lista</span>
-                    <button class="btn-close"></button>
-                </div>
-            </div>
-        </main>
-    </body>
+        </div>
+    </div>
+</body>
 
 </html>

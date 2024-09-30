@@ -35,12 +35,11 @@ body {
 
     background-color: var(--background-primary);
 
-    padding: 34px 32px 170px;
+    padding: 34px 32px;
 }
 
-
 /* btn back */
-.btn-back {
+.aBack {
     color: var(--color-brand);
     font-size: .875rem;
     line-height: 1rem;
@@ -48,7 +47,7 @@ body {
 }
 
 /* title */
-h1 {
+h2 {
     color: var(--content-primary);
     font-size: 1.5rem;
     line-height: 2rem;
@@ -65,7 +64,7 @@ h1 {
     margin-bottom: 40px;
 }
 
-#add-item #new-item {
+#add-item #inItem {
     background-color: var(--background-secondary);
     border: 2px solid var(--border-primary);
     border-radius: 12px;
@@ -77,29 +76,29 @@ h1 {
     line-height: 140%;
 }
 
-#add-item #new-item:hover {
+#add-item #inItem:hover {
     border-color: var(--content-tertiary);
 }
 
-#add-item #new-item:focus {
+#add-item #inItem:focus {
     outline: none;
     border-color: var(--color-brand);
     color: var(--content-primary);
 }
 
-#add-item #new-item::placeholder {
+#add-item #inItem::placeholder {
     color: var(--border-primary);
 }
 
-#add-item #new-item:hover::placeholder {
+#add-item #inItem:hover::placeholder {
     color: var(--content-tertiary)
 }
 
-#add-item #new-item:focus::placeholder {
+#add-item #inItem:focus::placeholder {
     color: var(--content-primary)
 }
 
-.btn-addItem {
+.btnAddItem {
     background-color: var(--color-brand);
     border-radius: 12px;
 
@@ -117,7 +116,7 @@ h1 {
     cursor: pointer;
 }
 
-.btn-addItem:hover {
+.btnAddItem:hover {
     background-color: var(--color-brand-hover);
 }
 
@@ -166,7 +165,7 @@ h1 {
     flex: 1 0 0;
 }
 
-.btn-bin {
+.btnBin {
     background: url("/assets/bin.svg") no-repeat center;
 
     width: 32px;
@@ -198,13 +197,13 @@ h1 {
     height: 20px;
 }
 
-.status span + span {
+.status span+span {
     flex: 1 0 0;
 }
 
-.btn-close {
+.btnClose {
     background: url("/assets/close.svg") no-repeat center;
-    
+
     width: 20px;
     height: 20px;
 }
@@ -214,6 +213,74 @@ h1 {
     background-color: var(--color-danger);
 }
 
-.hide {
+.hide,
+header {
     display: none;
+}
+
+@media (min-width: 647px) {
+
+    body {
+        max-width: 647px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+
+        margin-bottom: 62px;
+    }
+
+    header h1 {
+        font-family: 'Sora', sans-serif;
+
+        font-size: 1.66rem;
+    }
+
+    /* link back */
+    .aBack {
+        font-size: 1rem;
+    }
+
+    /* title */
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Add item */
+    #add-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    #add-item #inItem {
+        height: 44px;
+        padding: 0px 18px;
+
+        flex: 1 0 0;
+
+        margin-right: 16px;
+    }
+
+    .btnAddItem {
+        padding: 12px 24px;
+    }
+
+    /* list items */
+    #list-items {
+        gap: 16px;
+    }
+
+    /* Item */
+    .item {
+        gap: 16px;
+    }
+
+    .item input[type="checkbox"] {
+        zoom: 1.5;
+    }
 }
