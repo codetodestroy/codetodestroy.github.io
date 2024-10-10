@@ -165,7 +165,8 @@ h2 {
     flex: 1 0 0;
 }
 
-.btnBin {
+.btnRemoveItem {
+    cursor: pointer;
     background: url("/assets/bin.svg") no-repeat center;
 
     width: 32px;
@@ -216,10 +217,10 @@ h2 {
 .hide,
 header {
     display: none;
+    transition: all 3s;
 }
 
 @media (min-width: 647px) {
-
     body {
         max-width: 647px;
         margin: 0 auto;

@@ -1,62 +1,71 @@
+// Obtendo todos os elementos necessários 
 const inItem = document.querySelector('#inItem');
 const btnAddItem = document.querySelector('.btnAddItem');
+const listItems = document.querySelector('#list-items');
+const warningStatus = document.querySelector('.warning-status');
 
-const itemsList = document.querySelector('#list-items');
+// Todo item adicionado na lista vai ir somando para diferenciá-los
+let numberItem = 1;
 
-let idAndNameNewItem = 1;
-
-let btnRemove;
-
+// Listener no Botão para que ele possa adicionar um novo item sempre que clicar
 btnAddItem.addEventListener('click', () => {
-
-    if (inItem.value == '') {
-        alert('O campo para adicionar item está vázio, preencha-o!');
-        inItem.focus();
-    } else {
-        let messageItem = inItem.value;
-
-        // Creating a new li element
-        let li = document.createElement('li');
-        // Adding item class in the element
-        li.classList.add('item');
-
-        // Creating a new input element
-        let input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = 'item-' + idAndNameNewItem;
-        input.name = 'item-' + idAndNameNewItem;
-        input.value = messageItem;
-
-        // Creating a new label element
-        let label = document.createElement('label');
-        label.htmlFor = 'item-' + idAndNameNewItem;
-        label.innerText = messageItem;
-
-        // Creating a new button element
-        let button = document.createElement('button');
-        button.classList.add('btnBin');
-
-        // Adding children in parent
-        li.append(input, label, button);
-
-        idAndNameNewItem++;
-
-        itemsList.appendChild(li);
-
-        inItem.value = '';
+    if(!inItem.value) {
+        return alert('O campo de novo item está em branco, adicione-o!');
     }
 
-    btnRemove = document.querySelectorAll('#list-items li button');
+    // Adicionando um novo item na lista
+    const item = createItem(inItem.value);
+    listItems.append(item);
+});
 
-    btnRemove.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
+function createItem(message) {
+    // Criando um elemento pai de <li>
+    const li = document.createElement('li');
 
-            let deleteItemConfirm = confirm('Tem certeza que deseja deletar o item?');
+    // Criando os elementos filhos de <li>
+    const input = document.createElement('input');
+    const label = document.createElement('label');
+    const button = document.createElement('button');
 
-            if(deleteItemConfirm) {
-                btn.parentElement.remove();
-            }
+    // Adicionando uma classe no elemento pai
+    li.classList.add('item');
 
-        });
-    });
+    // Adicionando atributos nos elementos filhos
+    input.type = 'checkbox';
+    input.name = 'item-' + numberItem;
+    input.id = 'item-' + numberItem;
+
+    label.htmlFor = 'item-' + numberItem;
+    label.innerText = message;
+
+    // Adicionando uma classe no botão de remover
+    button.classList.add('btnRemoveItem');
+
+    // Colocando os elementos filhos no elemento pai
+    li.append(input, label, button);
+
+    // Incrementando para que o proximo item seja o valor a seguir
+    numberItem++;
+
+    // Retorna o elemento pai
+    return li;
+}
+
+document.addEventListener('click', (e) => {
+    // Recupera o elemento que foi clicado
+    const bin = e.target;
+
+    // Se o elemento clicado tiver a classe btnRemoveItem entra no if
+    if(bin.classList.contains('btnRemoveItem')) {
+        // Remove o item
+        bin.parentElement.remove();
+
+        // Em seguinda, remove a classe para mostrar a mensagem de exclusão
+        warningStatus.classList.remove('hide');
+
+        // Depois de 2 segundos, a mensagem some
+        setTimeout(() => {
+            warningStatus.classList.add('hide');
+        }, 2000);
+    }
 });
