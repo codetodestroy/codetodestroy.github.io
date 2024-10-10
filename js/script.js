@@ -9,7 +9,7 @@ let numberItem = 1;
 
 // Listener no Botão para que ele possa adicionar um novo item sempre que clicar
 btnAddItem.addEventListener('click', () => {
-    if(!inItem.value) {
+    if (!inItem.value) {
         return alert('O campo de novo item está em branco, adicione-o!');
     }
 
@@ -56,16 +56,23 @@ document.addEventListener('click', (e) => {
     const bin = e.target;
 
     // Se o elemento clicado tiver a classe btnRemoveItem entra no if
-    if(bin.classList.contains('btnRemoveItem')) {
-        // Remove o item
-        bin.parentElement.remove();
+    if (bin.classList.contains('btnRemoveItem')) {
 
-        // Em seguinda, remove a classe para mostrar a mensagem de exclusão
-        warningStatus.classList.remove('hide');
+        // Dialog para pegar a resposta se deseja mesmo remover
+        const answer = confirm('Tem certeza que deseja remover o item?');
 
-        // Depois de 2 segundos, a mensagem some
-        setTimeout(() => {
-            warningStatus.classList.add('hide');
-        }, 2000);
+        // Se a resposta for OK
+        if (answer) {
+            // Remove o item
+            bin.parentElement.remove();
+
+            // Em seguinda, remove a classe para mostrar a mensagem de exclusão
+            warningStatus.classList.remove('hide');
+
+            // Depois de 2 segundos, a mensagem some
+            setTimeout(() => {
+                warningStatus.classList.add('hide');
+            }, 2000);
+        }
     }
 });
