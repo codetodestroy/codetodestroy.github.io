@@ -10,12 +10,15 @@ let numberItem = 1;
 // Listener no Botão para que ele possa adicionar um novo item sempre que clicar
 btnAddItem.addEventListener('click', () => {
     if (!inItem.value) {
+        inItem.focus();
         return alert('O campo de novo item está em branco, adicione-o!');
     }
 
     // Adicionando um novo item na lista
     const item = createItem(inItem.value);
     listItems.append(item);
+    inItem.focus();
+    inItem.value = '';
 });
 
 function createItem(message) {
